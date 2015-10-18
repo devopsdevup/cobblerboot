@@ -6,8 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-include_recipe "apt"
-
 user 'jsmith' do
   comment 'Created by Chef'
   uid '6111'
