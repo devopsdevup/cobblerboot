@@ -8,3 +8,4 @@ validation_key           "#{current_dir}/example-validator.pem"
 chef_server_url          "https://192.168.150.2/organizations/example"
 syntax_check_cache_path  "#{ENV['HOME']}/.chef/syntaxcache"
 cookbook_path            ["#{current_dir}/../cookbooks"]
+knife[:editor]="vim"
