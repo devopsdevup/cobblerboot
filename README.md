@@ -1,2 +1,2 @@
 # cobblerboot
-Demonstrate provisioning with PXE boot
+Demonstrate provisioning with PXE boot + chef 
