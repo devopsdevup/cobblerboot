@@ -27,3 +27,13 @@ directory '/tmp/demo' do
   mode '0755'
   action :create
 end
+
+remote_file '/tmp/tcsh-6.18.01-7.el7.x86_64.rpm' do
+  source 'http://mirror.centos.org/centos/7/os/x86_64/Packages/tcsh-6.18.01-7.el7.x86_64.rpm'
+  mode '0755'
+end
+
+rpm_package "tcsh" do
+    source "/tmp/tcsh-6.18.01-7.el7.x86_64.rpm"
+    action :install
+end
