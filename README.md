@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Deprecated
 ==========
 
@@ -35,3 +36,7 @@ Next Steps
 ==========
 
 Read the README file in each of the subdirectories for more information about what goes in those directories.
+=======
+# cobblerboot
+Demonstrate provisioning with PXE boot
+>>>>>>> 8cb5f885f06b2971f3df62fabc445d020e845640
