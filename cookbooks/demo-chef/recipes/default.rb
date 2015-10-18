@@ -27,7 +27,3 @@ directory '/tmp/demo' do
   mode '0755'
   action :create
 end
-
-package 'csh' do
-  action :install
-end
