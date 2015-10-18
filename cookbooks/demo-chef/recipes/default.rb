@@ -6,6 +6,12 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+group 'demo' do
+  action :create
+  gid '6111'
+end
+
 user 'jsmith' do
   comment 'Created by Chef'
   uid '6111'
