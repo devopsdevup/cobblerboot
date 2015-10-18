@@ -17,13 +17,13 @@ user 'jsmith' do
   uid '6111'
   gid '6111'
   home '/home/jsmith'
-  shell '/bixn/bash'
+  shell '/bin/bash'
   password '$6$3ErpigHW8NcF$2/YxCkxwzCg32mEsuCZkjyNGjCBLd6ktDAbMqpJZAVeKwSA3UG11SbSP7c0voamolr6Q9qNcdDKphrzB3VkPB.'
 end
 
 directory '/tmp/demo' do
-  owner 'sysadmin'
-  group 'sysadmin'
+  owner 'jsmith'
+  group 'demo'
   mode '0755'
   action :create
 end
