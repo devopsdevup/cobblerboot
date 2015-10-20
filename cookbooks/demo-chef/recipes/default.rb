@@ -41,7 +41,7 @@ user 'janesmith' do
   home '/home/janesmith'
   shell '/bin/bash'
   password '$6$3ErpigHW8NcF$2/YxCkxwzCg32mEsuCZkjyNGjCBLd6ktDAbMqpJZAVeKwSA3UG11SbSP7c0voamolr6Q9qNcdDKphrzB3VkPB.jane'
-  only_if 'getent passwd janesmith'
+  not_if 'getent passwd janesmith'
 end
 
 # and we show the chef equivalent of: mkdir /tmp/demo && chown jsmith:demo /tmp/demo && chmod 755 /tmp/demo 
