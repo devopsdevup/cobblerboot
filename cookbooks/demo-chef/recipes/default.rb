@@ -12,6 +12,7 @@ group 'demo' do
   gid '6111'
 end
 
+# we create user 'jsmith' into the provisioned machine
 user 'jsmith' do
   comment 'Created by Chef'
   uid '6111'
@@ -28,6 +29,7 @@ directory '/tmp/demo' do
   action :create
 end
 
+# and then we show the installation of an rpm, in this case 'tcsh'
 remote_file '/tmp/tcsh-6.18.01-7.el7.x86_64.rpm' do
   source 'http://mirror.centos.org/centos/7/os/x86_64/Packages/tcsh-6.18.01-7.el7.x86_64.rpm'
   mode '0755'
