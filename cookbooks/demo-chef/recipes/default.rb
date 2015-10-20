@@ -34,7 +34,7 @@ end
 user 'janesmith' do
   comment 'Created by Chef'
   uid '6112'
-  gid '6112'
+  gid '6111'
   home '/home/janesmith'
   shell '/bin/bash'
   password '$6$3ErpigHW8NcF$2/YxCkxwzCg32mEsuCZkjyNGjCBLd6ktDAbMqpJZAVeKwSA3UG11SbSP7c0voamolr6Q9qNcdDKphrzB3VkPB.jane'
