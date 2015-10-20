@@ -30,6 +30,24 @@ directory '/tmp/demo' do
   action :create
 end
 
+# 2nd example 'Mrs. Smith'
+user 'janesmith' do
+  comment 'Created by Chef'
+  uid '6112'
+  gid '6112'
+  home '/home/janesmith'
+  shell '/bin/bash'
+  password '$6$3ErpigHW8NcF$2/YxCkxwzCg32mEsuCZkjyNGjCBLd6ktDAbMqpJZAVeKwSA3UG11SbSP7c0voamolr6Q9qNcdDKphrzB3VkPB.jane'
+end
+
+# and we show the chef equivalent of: mkdir /tmp/demo && chown jsmith:demo /tmp/demo && chmod 755 /tmp/demo 
+directory '/tmp/demojane' do
+  owner 'janesmith'
+  group 'demo'
+  mode '0755'
+  action :create
+end
+
 # and then we show the installation of an rpm, in this case 'tcsh'
 remote_file '/tmp/tcsh-6.18.01-7.el7.x86_64.rpm' do
   source 'http://mirror.centos.org/centos/7/os/x86_64/Packages/tcsh-6.18.01-7.el7.x86_64.rpm'
