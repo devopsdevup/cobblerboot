@@ -10,7 +10,7 @@
 group 'demo' do
   action :create
   gid '6111'
-  only_if 'getent group demo'
+  not_if 'getent group demo'
 end
 
 # we create user 'jsmith' into the provisioned machine
@@ -21,7 +21,7 @@ user 'jsmith' do
   home '/home/jsmith'
   shell '/bin/bash'
   password '$6$3ErpigHW8NcF$2/YxCkxwzCg32mEsuCZkjyNGjCBLd6ktDAbMqpJZAVeKwSA3UG11SbSP7c0voamolr6Q9qNcdDKphrzB3VkPB.'
-  only_if 'getent passwd jsmith'
+  not_if 'getent passwd jsmith'
 end
 
 # and we show the chef equivalent of: mkdir /tmp/demo && chown jsmith:demo /tmp/demo && chmod 755 /tmp/demo 
