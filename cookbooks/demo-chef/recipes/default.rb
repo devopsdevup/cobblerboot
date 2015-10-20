@@ -22,6 +22,7 @@ user 'jsmith' do
   password '$6$3ErpigHW8NcF$2/YxCkxwzCg32mEsuCZkjyNGjCBLd6ktDAbMqpJZAVeKwSA3UG11SbSP7c0voamolr6Q9qNcdDKphrzB3VkPB.'
 end
 
+# and we show the chef equivalent of: mkdir /tmp/demo && chown jsmith:demo /tmp/demo && chmod 755 /tmp/demo 
 directory '/tmp/demo' do
   owner 'jsmith'
   group 'demo'
