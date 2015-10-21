@@ -33,6 +33,7 @@ directory '/tmp/demo' do
   not_if { ::File.exist? '/tmp/demo' }
 end
 
+=begin
 # 2nd example 'Mrs. Smith'
 user 'janesmith' do
   comment 'Created by Chef'
@@ -52,6 +53,8 @@ directory '/tmp/demojane' do
   action :create
   not_if { ::File.exist? '/tmp/demojane' }
 end
+
+=end
 
 # and then we show the installation of an rpm, in this case 'tcsh'
 remote_file '/tmp/tcsh-6.18.01-7.el7.x86_64.rpm' do
