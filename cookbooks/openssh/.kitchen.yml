@@ -1,0 +1,44 @@
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+driver_config:
+  require_chef_omnibus: true
+
+platforms:
+  - name: ubuntu-15.04
+    run_list:
+    - recipe[apt::default]
+  - name: ubuntu-14.04
+    run_list:
+    - recipe[apt::default]
+  - name: ubuntu-12.04
+    run_list:
+    - recipe[apt::default]
+  - name: ubuntu-10.04
+    run_list:
+    - recipe[apt::default]
+  - name: debian-7.8
+    run_list:
+    - recipe[apt::default]
+  - name: debian-6.0.10
+    run_list:
+    - recipe[apt::default]
+  - name: freebsd-9.3
+    run_list:
+    - recipe[freebsd::portsnap]
+  - name: freebsd-10.1
+    run_list:
+    - recipe[freebsd::portsnap]
+  - name: centos-7.1
+  - name: centos-6.6
+  - name: centos-5.11
+  - name: fedora-20
+  - name: fedora-21
+
+suites:
+  - name: default
+    run_list:
+      - recipe[openssh::default]
